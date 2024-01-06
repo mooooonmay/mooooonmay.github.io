@@ -2543,7 +2543,7 @@ pre .javascript .function {
   width: 60px;
   height: 60px;
   position: absolute;
-  right: 0;
+  right: -84px;
   top: 0;
 }
 @media screen and (max-width: 767px) {
