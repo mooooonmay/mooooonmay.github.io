@@ -1037,6 +1037,7 @@ navbar {
   margin-bottom: 16px;
 }
 .article-inner {
+  overflow: hidden;
   margin-bottom: 16px;
   display: -webkit-box;
   display: -moz-box;
