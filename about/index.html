@@ -14,19 +14,21 @@
   
 
   
-  <title>about | 五 月 (mooooonmay)</title>
+  <title>五 月 (mooooonmay)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="about">
+  <meta name="description" content=".progress-box {     width: 100%;     overflow: hidden;     padding: 0.5em;     box-sizing: border-box;   }   .audio-progress {     display: block;     height: 0.5em;     background-color: var(--btn">
+<meta property="og:type" content="website">
+<meta property="og:title" content="五 月 (mooooonmay)">
 <meta property="og:url" content="http://example.com/about/index.html">
 <meta property="og:site_name" content="五 月 (mooooonmay)">
+<meta property="og:description" content=".progress-box {     width: 100%;     overflow: hidden;     padding: 0.5em;     box-sizing: border-box;   }   .audio-progress {     display: block;     height: 0.5em;     background-color: var(--btn">
 <meta property="og:locale">
-<meta property="article:published_time" content="2024-01-06T07:23:09.000Z">
-<meta property="article:modified_time" content="2024-01-06T07:23:09.819Z">
+<meta property="article:published_time" content="2024-01-08T11:12:34.587Z">
+<meta property="article:modified_time" content="2024-01-08T11:12:34.587Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -149,9 +151,14 @@
     <div class="widget">
       <h3 class="widget-title">分类</h3>
       <div class="category-box">
+            <a class="category-link" href="/categories/Android/">
+                Android
+                <div class="category-count">1</div>
+            </a>
+        
             <a class="category-link" href="/categories/hello/">
                 hello
-                <div class="category-count">2</div>
+                <div class="category-count">1</div>
             </a>
         <div class="children"><div class="category-box">
             <a class="category-link" href="/categories/hello/world/">
@@ -168,7 +175,7 @@
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title">标签</h3>
-      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/hello/" rel="tag">hello</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/word/" rel="tag">word</a></li></ul>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Android-kotlin/" rel="tag">Android kotlin</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/hello/" rel="tag">hello</a></li></ul>
     </div>
   </div>
 
@@ -192,7 +199,7 @@
   
     
       <h1 class="p-name article-title" itemprop="headline name">
-        about
+        无标题
       </h1>
     
   
@@ -200,7 +207,7 @@
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2024-01-06T07:23:09.000Z" itemprop="datePublished">2024-01-06</time>
+  <time class="dt-published" datetime="2024-01-08T11:12:34.587Z" itemprop="datePublished">2024-01-08</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
@@ -211,14 +218,206 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            0 词 
+            3.7k 词 
           </div>
         </div>
         
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          
+          <style>
+  .progress-box {
+    width: 100%;
+    overflow: hidden;
+    padding: 0.5em;
+    box-sizing: border-box;
+  }
+  .audio-progress {
+    display: block;
+    height: 0.5em;
+    background-color: var(--btn-bg);
+    border-radius: 100px;
+    /* overflow: hidden; */
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0 0 2px 0px var(--btn-text-content);
+  }
+  .audio-progress .progress {
+    /* padding: 0 50px;
+        transform: translateX(-100px); */
+    width: 0%;
+    background-color: var(--btn-text-content);
+    border-radius: 100px;
+    height: 100%;
+    position: relative;
+    /* transition: all 0.2s cubic-bezier(0, 0.68, 0.42, 1.35); */
+    /* border-radius: 100px; */
+  }
+  .audio-progress .progress .progress-span {
+    content: "";
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: var(--btn-text-content);
+    position: absolute;
+    right: 0;
+    transform: translateX(50%) scale(1.6);
+    box-shadow: 0 0 6px var(--card-background);
+    border-radius: 100px;
+    transition: all 0.2s ease-in-out;
+  }
+  .audio-progress .progress .progress-span:hover {
+    box-shadow: 0 0 8px 4px var(--card-background);
+  }
+  .start,
+  .stop {
+    cursor: pointer;
+  }
+</style>
+
+<div class="audio-box">
+  <audio src="./任素汐 - 胡广生.mp3"></audio>
+  <div class="start">播放</div>
+  <div class="stop" style="display: none">暂停</div>
+  <div>
+    <div class="progress-box">
+      <div class="audio-progress">
+        <div class="progress">
+          <div class="progress-span"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let isMoveProgress = false;
+  let startX = 0;
+  let offsetX = 0;
+  let isChange = false;
+  let duration = 0;
+  // 计算音频的时长
+  const countAudioTime = async (src) => {
+    const audioA = new Audio();
+    audioA.src = src;
+
+    while (isNaN(audioA.duration) || audioA.duration === Infinity) {
+      // 延迟一会 不然网页都卡死
+      await new Promise((resolve) => setTimeout(resolve, 200));
+      // 设置随机播放时间，模拟调进度条
+      audioA.currentTime = 10000000 * Math.random();
+    }
+    duration = audioA.duration;
+  };
+  countAudioTime("./任素汐 - 胡广生.mp3");
+
+  const audio = document.querySelector("audio");
+  const audioProgress = document.querySelector(".audio-progress");
+  const progressNumber = audioProgress.querySelector(".progress");
+  const progressSpan = progressNumber.querySelector(".progress-span");
+
+  const start = document.querySelector(".start");
+  const stop = document.querySelector(".stop");
+  start.addEventListener("click", function (e) {
+    this.style.display = "none";
+    stop.style.display = "block";
+    audio.play();
+  });
+  stop.addEventListener("click", function (e) {
+    this.style.display = "none";
+    start.style.display = "block";
+    audio.pause();
+  });
+
+  audio.addEventListener("timeupdate", function () {
+    if (isMoveProgress) return;
+    let offsetX = (this.currentTime / duration) * 100 + "%";
+    console.log(offsetX, this.currentTime, duration);
+    progressNumber.style.width = offsetX;
+  });
+
+  audio.addEventListener("ended", function () {
+    console.log("播放结束");
+    stop.style.display = "none";
+    start.style.display = "block";
+    audio.load();
+  });
+
+  progressSpan.addEventListener("mousedown", function (e) {
+    if (audio.readyState == 0) return;
+
+    isMoveProgress = Date.now();
+    startX = e.clientX;
+    offsetX = progressNumber.clientWidth;
+  });
+
+  document.addEventListener("mousemove", function (e) {
+    if (isMoveProgress) {
+      isChange = true;
+      const offset = e.clientX - startX;
+      let width = ((offsetX + offset) / audioProgress.clientWidth) * 100;
+      if (width > 100) {
+        width = 100;
+      } else if (width < 0) {
+        width = 0;
+      }
+      progressNumber.style.width = `${width}%`;
+    }
+  });
+
+  document.addEventListener("mouseup", function (e) {
+    if (!isMoveProgress) return;
+    const offset = e.clientX - startX;
+    let width = (offsetX + offset) / audioProgress.clientWidth;
+    if (width > 1) {
+      width = 1;
+    } else if (width < 0) {
+      width = 0;
+    }
+    isMoveProgress = false;
+    startX = 0;
+    if (!isChange) {
+      return;
+    }
+    console.log("up", width, width * duration);
+
+    audio.currentTime = width * duration;
+  });
+
+  audioProgress.addEventListener("click", function (e) {
+    if (audio.readyState == 0) return;
+    if (isChange) {
+      isChange = false;
+      return;
+    }
+    console.log("click");
+    const width = this.clientWidth;
+    const offsetX = e.clientX - audioProgress.getBoundingClientRect().left;
+    const AnimateObj = progressNumber.animate(
+      {
+        width: (offsetX / width) * 100 + "%",
+      },
+      {
+        duration: 200,
+        // easing: "cubic-bezier(0, 0.68, 0.42, 1.35)",
+        easing: "cubic-bezier(0, 0.68, 0.88, 1.19)",
+        fill: "forwards",
+      }
+    );
+    AnimateObj.onfinish = function () {
+      console.log(duration * (offsetX / width));
+      progressNumber.style.width = (offsetX / width) * 100 + "%";
+      console.log("finish", audio.currentTime);
+      audio.currentTime = duration * (offsetX / width);
+      console.log("finish", audio.currentTime);
+      AnimateObj.cancel();
+    };
+  });
+
+  // progressNumber.addEventListener("click", function(e){
+  // })
+</script>
+
         
       </div>
 
